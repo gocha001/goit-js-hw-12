@@ -47,6 +47,10 @@ body {
   border: none;
 }
 
+.icon-scroll {
+  fill: blue;
+}
+
 .header {
   display: flex;
   justify-content: center;
