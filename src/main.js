@@ -96,7 +96,11 @@ async function handleSubmitLoadMore(event) {
     loader.style.display = 'none';
 
     createImagesMarkup(hits);
-    setScrolling();
+
+    const liEl = document.querySelector('.gallery-item');
+    const { height } = liEl.getBoundingClientRect();
+
+    setScrolling(height);
 
     const totalPage = Math.ceil(totalHits / per_page);
     if (totalPage == page) {
@@ -115,9 +119,9 @@ async function handleSubmitLoadMore(event) {
   }
 }
 
-function setScrolling() {
+function setScrolling(height) {
   window.scrollBy({
-    top: gallery.getBoundingClientRect().height * 0.14,
+    top: height * 2,
     behavior: 'smooth',
   });
 }
