@@ -2,13 +2,49 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   min-height: 760px;
-  background-image: url(https://pixabay.com/get/gde6f5d4ea9561fbf1b8982f83b2be0a5604ed9486952412b86966b5b977516187ffe2f738b840edbd984e4f4fd16318a5a7ee7b828b22abcbcffa12858570d88_1280.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   color: #fff;
+}
+
+.fon {
+  position: fixed;
+  background-image: url(../img/butterfly-g9b0cbe4f9_1280-min.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -5;
+}
+
+#scrollTop {
+  position: fixed;
+  bottom: 70px;
+  right: 70px;
+  font-size: 40px;
+  z-index: 9999;
+}
+
+.isShowBtn {
+  opacity: 1;
+  transition: 500;
+  &_hide {
+    opacity: 0;
+  }
+}
+
+.btn-scroll {
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: none;
 }
 
 .header {
