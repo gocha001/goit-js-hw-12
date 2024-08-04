@@ -19,7 +19,7 @@ function handleScroll() {
 }
 
 window.onscroll = () => {
-  if (window.scrollY > 700) {
+  if (window.scrollY > 500) {
     scrollUp.style.display = 'block';
   } else {
     scrollUp.style.display = 'none';
@@ -121,7 +121,7 @@ async function handleSubmitLoadMore(event) {
 
 function setScrolling(height) {
   window.scrollBy({
-    top: height * 2,
+    top: height * 2.7,
     behavior: 'smooth',
   });
 }
